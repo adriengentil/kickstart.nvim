@@ -733,7 +733,6 @@ require('lazy').setup({
           end,
         },
       }
-      require('lspconfig').gleam.setup {}
     end,
   },
 
@@ -949,7 +948,6 @@ require('lazy').setup({
         'vimdoc',
         'go',
         'python',
-        'gleam',
         'scheme',
       },
       -- Autoinstall languages that are not installed
@@ -982,6 +980,12 @@ require('lazy').setup({
   },
   {
     'Olical/conjure',
+  },
+  {
+    'julienvincent/nvim-paredit',
+    config = function()
+      require('nvim-paredit').setup()
+    end,
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
